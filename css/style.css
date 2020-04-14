@@ -32,6 +32,23 @@
     margin: 35px;
   }
 
+  .container_subtitle, form{
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
  .btn-filled-orange{
   color: #fff;
   background: #f3520c;
@@ -44,6 +61,12 @@
   text-decoration: none;
   }
 
+.btn-filled-orange:hover{
+background:#000000;
+transition: .5s; 
+
+}
+
 .sp{
 color: #f3520c;
 font-weight: bold;
@@ -51,7 +74,6 @@ font-weight: bold;
 
 .nav{
   height: 100vh;
-  background: #646f75;
   position: fixed;
   float: left;
   display: flex;
@@ -63,9 +85,24 @@ font-weight: bold;
   z-index: 200;
 }
 
+.nav_title{
+  background:#3b4750;
+  height: 116px;
+  text-transform: uppercase;
+}
+
+.nav__t{
+  float: right;
+  font-size: 11px;
+  margin: 44px 4px;
+}
+
 .navigation__list{
   display: block;
+  background: #646f75;
   list-style-type: disc;
+  padding: 0px 5px 10px 5px;
+  margin-top: 0;
 }
 
 a{
@@ -73,24 +110,38 @@ a{
   list-style: none;
   display: block;
   text-decoration: none;
-  padding: 5px;
   margin: 1em;
+  line-height: 2.15;
 
 }
 
-.navigation__list li{
-    display: table;
-    line-height: 45px;
+.navigation__list>li{
+    margin: auto;
+    list-style: none;
 }
 
 .navigation__item{
   font-size: 15px;
 }
 
-.naviganion__list:hover{
-  color: black;
-  background-color: #3a4750;
+.navigation__link{
+  padding: 10px 17px 14px 17px;
+  font-size: 1em;
+}
+
+.navigation__list>.navigation__item>.navigation__link:hover {
+  color: #fff;
+  background-color: #6f00cc;
   cursor: pointer;
+  transition: 1.5s;
+}
+
+.navigation__img{
+  height: 25px;
+  width: 25px;
+  color: #fff;
+  float: left;
+  margin: 3px 5px 3px 5px;
 }
 
 .block{
